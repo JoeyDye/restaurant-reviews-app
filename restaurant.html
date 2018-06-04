@@ -12,6 +12,7 @@
 </head>
 
 <body class="inside">
+  <a class="hidden" href="#maincontent">Skip to main content</a>
   <!-- Beginning header -->
   <header>
     <!-- Beginning nav -->
@@ -32,24 +33,26 @@
   <!-- End header -->
 
   <!-- Beginning main -->
-  <main class="restaurant-main" id="maincontent">
+  <main class="restaurant-main">
     <!-- Beginning map -->
     <section id="map-container">
       <div id="map"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
-    <section id="restaurant-container">
-      <h1 id="restaurant-name"></h1>
-      <img id="restaurant-img">
-      <p id="restaurant-cuisine"></p>
-      <p id="restaurant-address"></p>
-      <table id="restaurant-hours"></table>
-      <!-- Beginning reviews -->
-      <section id="reviews-container">
-        <ul id="reviews-list"></ul>
+    <section id="maincontent">
+      <section id="restaurant-container">
+        <h1 id="restaurant-name"></h1>
+        <img id="restaurant-img">
+        <p id="restaurant-cuisine" aria-label="Restaurant cousine"></p>
+        <p id="restaurant-address" aria-label="Restaurant address"></p>
+        <table id="restaurant-hours" role="table" aria-label="Restaurant hours"></table>
+        <!-- Beginning reviews -->
+        <section id="reviews-container">
+          <ul id="reviews-list"></ul>
+        </section>
+        <!-- End reviews -->
       </section>
-      <!-- End reviews -->
     </section>
     <!-- end restaurant -->
   </main>

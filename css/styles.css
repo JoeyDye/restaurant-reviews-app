@@ -87,13 +87,12 @@ section {
 #footer a:hover {
   color: #0092e1;
 }
-/* ====================== Navigation ====================== */
-.skip-link {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-}
 
+.hidden {
+  position: absolute !important;
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
+}
+/* ====================== Navigation ====================== */
 nav {
   display: flex;
   justify-content: center;
@@ -312,7 +311,7 @@ nav h1 a {
   width: 90%;
 }
 #restaurant-container {
-  margin: 125px 0 0 0;
+  margin: 150px 0 0 0;
   padding: 0 0 0 25px;
   position: relative;
   width: 100%;

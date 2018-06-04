@@ -81,12 +81,16 @@ window.initMap = () => {
     scrollwheel: false
   });
   updateRestaurants();
-  const addAttribute = () => {
+  const addTitle = () => {
     const iframe = document.querySelector('iframe');
     iframe.setAttribute('title', 'Map of restaurant locations');
+    iframe.setAttribute('tabindex', '-1');
+
+    const gmStyleChild = document.querySelector('.gm-style').firstChild;
+    gmStyleChild.setAttribute('tabindex', '-1');
   };
 
-  google.maps.event.addDomListener(window, 'load', addAttribute);
+  google.maps.event.addDomListener(window, 'load', addTitle);
 };
 
 /**
