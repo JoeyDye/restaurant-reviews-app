@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Restaurant Reviews</title>
+</head>
+
+<body>
+  <header>
+    <a class="skip-link" href="#maincontent">Skip to main content</a>
+    <nav>
+      <h1>
+        <a href="/">Restaurant Reviews</a>
+      </h1>
+    </nav>
+  </header>
+
+  <main id="maincontent">
+    <section id="map-container">
+      <div id="map"></div>
+    </section>
+    <section>
+      <div class="filter-options">
+        <h2>Filter Results</h2>
+        <div>
+          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+            <option value="all">All Neighborhoods</option>
+          </select>
+          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+            <option value="all">All Cuisines</option>
+          </select>
+        </div>
+      </div>
+      <ul id="restaurants-list"></ul>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <footer id="footer">
+      <div>
+        Copyright (c)
+        <span id="copyright-year"></span>
+        <a href="/" class="footer-link">Restaurant Reviews</a>
+        All Rights Reserved.
+      </div>
+    </footer>
+
+    <!-- Start scripts -->
+    <!-- Dynamic copyright date -->
+    <script src="js/copyright.js"></script>
+    <!-- Database helpers -->
+    <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
+    <!-- Main javascript file -->
+    <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
+    <!-- Google Maps -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvGp0bcseLAHBEv6MNsyHulm_Ss4jsdIQ&libraries=places&callback=initMap"></script>
+    <!-- End scripts -->
+
+</html>
