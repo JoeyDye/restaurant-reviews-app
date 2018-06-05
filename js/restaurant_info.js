@@ -63,7 +63,6 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
 
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
-  address.setAttribute('aria-labelledby', 'restaurant-address');
 
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img';
