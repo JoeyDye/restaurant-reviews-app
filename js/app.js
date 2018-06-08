@@ -1,4 +1,6 @@
-// Check if browser implements service worker API
+/**
+ * @description Check if browser implements service worker API
+ */
 if ('serviceWorker' in navigator) {
   // Wait for document to load
   window.addEventListener(

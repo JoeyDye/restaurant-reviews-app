@@ -61,4 +61,8 @@ gulp.task('img', () => {
     .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('default', ['html', 'css', 'json', 'js', 'img']);
+gulp.task('sw', () => {
+  return gulp.src('sw.js').pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('default', ['html', 'css', 'json', 'js', 'img', 'sw']);

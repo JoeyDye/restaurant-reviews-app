@@ -1,7 +1,9 @@
 let staticCacheName = 'restaurant-static-v1';
-const cacheFiles = ['/', 'restaurant.html', 'img/', 'js/', 'app.js', 'sw.js'];
+const cacheFiles = ['/', 'restaurant.html', 'img/', 'js/'];
 
-// Listen for install
+/**
+ * @description Add files to cache on install
+ */
 self.addEventListener('install', e => {
   // Wait until promise is resolved
   e.waitUntil(
@@ -11,14 +13,16 @@ self.addEventListener('install', e => {
   );
 });
 
-// Listen for activate
+/**
+ * @description Delete old caches on activate
+ */
 self.addEventListener('activate', e => {
   e.waitUntil(
     caches
       .keys()
       .then(cacheNames => {
         return Promise.all(
-          cachNames
+          cacheNames
             .filter(cacheName => cacheName !== staticCacheName)
             .map(cacheName => caches.delete(cacheName))
         );
@@ -27,9 +31,10 @@ self.addEventListener('activate', e => {
   );
 });
 
-// Listen for requests
+/**
+ * @description Respond with cached files if in cache. If not, fetch files.
+ */
 self.addEventListener('fetch', e => {
-  // If file is in cache, respond with cached file, else fetch file
   e.respondWith(
     caches.match(e.request).then(res => {
       return res || fetch(e.request);
