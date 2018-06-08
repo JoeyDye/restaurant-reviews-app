@@ -1,6 +1,6 @@
 # Restaurant Reviews App
 
-The restaurant review app displays a selection of handpicked local restaurants for food lovers of all types.
+The restaurant reviews app displays a selection of handpicked local restaurants for food lovers of all types.
 
 Features include images, map and directions, hours of operation, reviews, and more for each chosen location.
 
@@ -34,4 +34,4 @@ In a terminal, check the version of Python you have: python -V. If you have Pyth
 
 - Hat tip to [Udacity](https://www.udacity.com/courses/career) for providing the starter code for this project.
 - Hat tip to WebAim for [article](https://webaim.org/techniques/css/invisiblecontent/) on how to hide content just for screen readers
-- Hat tip to bitsofcode for her video on setting up a basic [service worker](https://www.youtube.com/watch?v=BfL3pprhnms)
+- Hat tip to bitsofcode for the video on setting up a basic [service worker](https://www.youtube.com/watch?v=BfL3pprhnms)
