@@ -84,10 +84,6 @@ window.initMap = () => {
   const addTitle = () => {
     const iframe = document.querySelector('iframe');
     iframe.setAttribute('title', 'Map of restaurant locations');
-    iframe.setAttribute('tabindex', '-1');
-
-    const gmStyleChild = document.querySelector('.gm-style').firstChild;
-    gmStyleChild.setAttribute('tabindex', '-1');
   };
 
   google.maps.event.addDomListener(window, 'load', addTitle);
@@ -159,7 +155,7 @@ createRestaurantHTML = restaurant => {
   image.alt = restaurant.image_description;
   li.append(image);
 
-  const name = document.createElement('h2');
+  const name = document.createElement('h3');
   name.innerHTML = restaurant.name;
   li.append(name);
 

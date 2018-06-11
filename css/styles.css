@@ -236,6 +236,11 @@ nav h1 a {
   text-align: center;
 }
 
+#restaurants-list h3 {
+  font-size: 1.35rem;
+  margin: 25px 0 15px 0;
+}
+
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
